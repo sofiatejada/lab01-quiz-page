@@ -9,3 +9,20 @@
 8) Consider your data model. What objects will you be using? What are the key/value pairs? What arrays do you need? What needs to live in local storage?
 9) Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.
 
+
+
+
+
+## HTML
+
+1) intro paragraph about the DR
+1) unordered list of things to do in the DR
+1) list of the foods that Dominicans eat
+1) section about pre-history
+1) section about european colonization
+1) section about independence from Spain
+1) an image of DR beaches
+1) an imagae of DR people
+1) an image of founding fathers
+
+JS
