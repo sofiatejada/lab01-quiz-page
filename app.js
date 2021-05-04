@@ -45,12 +45,16 @@ button.addEventListener('click', () => {
     
     if (score === 3) {
         resultsGood.textContent = `Excellent, ${userName}! You got ${score} questions right. That's ${Math.floor(percentage)}%`;
+        resultsGood.style.display = 'block';
     } else if (score === 2){
         resultsGood.textContent = `Good job, ${userName}! You got ${score} questions right. That's ${Math.floor(percentage)}%`;
+        resultsGood.style.display = 'block';
     } else if (score === 1) {
         resultsBad.textContent = `You should read the article again, ${userName}! You got ${score} question right. That's ${Math.floor(percentage)}%`;
+        resultsBad.style.display = 'block';
     } else if (score === 0) {
         resultsBad.textContent = `Uh-oh, ${userName}! You got ${score} questions right. That's ${Math.floor(percentage)}%! Try again!`;
+        resultsBad.style.display = 'block';
     }
 
 });
