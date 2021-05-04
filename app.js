@@ -9,12 +9,15 @@ const resultsBad = document.getElementById('results-bad');
 // set event listeners to update state and DOM
 button.addEventListener('click', () => {
 
+    //start the quiz
     const ready = confirm('Are you ready to take the quiz?');
     if (ready === false) {
         return;
     }
+
     const userName = prompt('What\'s your name?');
 
+    //questions
     const question1 = prompt('Are the natives from the Dominican Republic called Taino?');
 
     const question2 = prompt('Is the Dominican Republic the least visited destination in the Caribbean?');
@@ -22,10 +25,9 @@ button.addEventListener('click', () => {
     const question3 = prompt('Was Santo Domingo Wester Europe\'s first settlement in the New World?');
 
 
-
+    //scoring
     let score = 0;
 
-    
     if (countsAsAYes(question1)) {
         score = score + 1;
     }
@@ -38,7 +40,7 @@ button.addEventListener('click', () => {
         score = score + 1;
     }
 
-
+    //results
     alert('Quiz finished! Your results are displayed below.');
 
     const percentage = (score / 3) * 100;
