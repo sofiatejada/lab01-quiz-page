@@ -1,8 +1,9 @@
-import { countsAsAYes } from './utils.js';
+import { countsAsAYes, fix } from './utils.js';
 
 //grab DOM elements
 const button = document.getElementById('button');
-const results = document.getElementById('results');
+const resultsGood = document.getElementById('results-good');
+const resultsBad = document.getElementById('results-bad');
 
 
 // set event listeners to update state and DOM
@@ -26,20 +27,30 @@ button.addEventListener('click', () => {
 
     
     if (countsAsAYes(question1)) {
-        score++;
+        score = score + 1;
     }
 
-    if (!countsAsAYes(question2)) {
-        score++;
+    if (fix(question2)) {
+        score = score + 1;
     }
 
     if (countsAsAYes(question3)) {
-        score++;
+        score = score + 1;
     }
 
 
     alert('Quiz finished! Your results are displayed below.');
 
-    results.textContent = `Good job, ${userName}! You got ${score} questions right.`;
+    const percentage = (score / 3) * 100;
+    
+    if (score === 3) {
+        resultsGood.textContent = `Excellent, ${userName}! You got ${score} questions right. That's ${Math.floor(percentage)}%`;
+    } else if (score === 2){
+        resultsGood.textContent = `Good job, ${userName}! You got ${score} questions right. That's ${Math.floor(percentage)}%`;
+    } else if (score === 1) {
+        resultsBad.textContent = `You should read the article again, ${userName}! You got ${score} question right. That's ${Math.floor(percentage)}%`;
+    } else if (score === 0) {
+        resultsBad.textContent = `Uh-oh, ${userName}! You got ${score} questions right. That's ${Math.floor(percentage)}%! Try again!`;
+    }
 
 });
