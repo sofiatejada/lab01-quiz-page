@@ -26,3 +26,14 @@
 1) an image of founding fathers
 
 JS
+1) grabbing DOM elements
+1) create function
+1) test function
+1) create even listener
+1) add confirm if user wants to take quiz
+1) add prompt for user's name
+1) add three questions using prompt calls
+1) create a variable that will keep track of their score
+1) compare their answer to the function
+1) alert user that quiz is done and resuls will show
+1) add template literal displaying results
